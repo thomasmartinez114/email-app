@@ -12,23 +12,35 @@ public class Email {
     private String companySuffix = "halfabilco.com";
 
     // Constructor to receive the first & last name
-    public Email(String firstName, String lastName){
-        this.firstName = firstName; // this.firstName refers to Class Level above, firstName local
+    // public Email(String firstName, String lastName){
+    public Email(){
+       // this.firstName = firstName; // this.firstName refers to Class Level above, firstName local
+       // this.lastName = lastName;
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter first name: ");
+        String firstName = in.nextLine();
+        System.out.print("Enter last name: ");
+        String lastName = in.nextLine();
+        this.firstName = firstName;
         this.lastName = lastName;
-        System.out.println("EMAIL CREATED: " + this.firstName + " " + this.lastName);
+        System.out.println("======================================");
 
         // Call a method asking for department - return department
         this.department = setDepartment();
         System.out.println("Department: " + this.department);
-
-        // Call method that returns random password
-        this.password = randomPassword(defaultPasswordLength);
-        System.out.println("Your password is: " + this.password);
+        System.out.println("======================================");
 
         // Combine elements to generate email
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" +
                 department.toLowerCase() + "." + companySuffix;
         System.out.println("Your email is: " + email);
+        System.out.println("Login Name: " + this.firstName.toLowerCase() + "." + this.lastName.toLowerCase());
+
+        // Call method that returns random password
+        this.password = randomPassword(defaultPasswordLength);
+        System.out.println("Your password is: " + this.password);
+        System.out.println("======================================");
     }
 
     // Ask for department
