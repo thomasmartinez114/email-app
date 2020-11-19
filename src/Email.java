@@ -6,7 +6,7 @@ public class Email {
     private String password;
     private String department;
     private String email;
-    private int mailboxCapacity;
+    private int mailboxCapacity = 500;
     private int defaultPasswordLength = 10;
     private String alternateEmail;
     private String companySuffix = "halfabilco.com";
@@ -73,6 +73,11 @@ public class Email {
     }
 
     // Set the mailbox capacity
+    // encapsulation -> hiding the property mailboxCapacity by having capacity be the
+    // param setting to it
+    public void setMailboxCapacity(int capacity) {
+        this.mailboxCapacity = capacity;
+    }
 
     // Set the alternate email
 
