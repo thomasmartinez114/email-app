@@ -90,4 +90,7 @@ public class Email {
     }
 
     // Change the password
+    public void changePassword(String password){
+        this.password = password;
+    }
 }
