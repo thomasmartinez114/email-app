@@ -6,7 +6,7 @@ public class Email {
     private String password;
     private String department;
     private int mailboxCapacity;
-    private int defaultPasswordLength;
+    private int defaultPasswordLength = 10;
     private String alternateEmail;
 
     // Constructor to receive the first & last name
