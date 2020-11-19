@@ -18,10 +18,15 @@ public class Email {
        // this.lastName = lastName;
 
         Scanner in = new Scanner(System.in);
+
+        // user input firstName
         System.out.print("Enter first name: ");
         String firstName = in.nextLine();
+
+        // user input lastName
         System.out.print("Enter last name: ");
         String lastName = in.nextLine();
+
         this.firstName = firstName;
         this.lastName = lastName;
         System.out.println("======================================");
@@ -80,6 +85,9 @@ public class Email {
     }
 
     // Set the alternate email
+    public void setAlternateEmail(String altEmail){
+        this.alternateEmail = altEmail;
+    }
 
     // Change the password
 }
