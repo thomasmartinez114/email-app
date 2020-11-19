@@ -80,17 +80,23 @@ public class Email {
     // Set the mailbox capacity
     // encapsulation -> hiding the property mailboxCapacity by having capacity be the
     // param setting to it
-    public void setMailboxCapacity(int capacity) {
-        this.mailboxCapacity = capacity;
+    public void setMailboxCapacity() {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the mailbox capacity: ");
+        this.mailboxCapacity = in.nextInt();
     }
 
     // Set the alternate email
-    public void setAlternateEmail(String altEmail){
-        this.alternateEmail = altEmail;
+    public void setAlternateEmail(){
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter alternative email: ");
+        this.alternateEmail = in.nextLine();
     }
 
     // Change the password
-    public void changePassword(String password){
-        this.password = password;
+    public void changePassword(){
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter new password: ");
+        this.password = in.nextLine();
     }
 }
