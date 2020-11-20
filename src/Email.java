@@ -22,25 +22,24 @@ public class Email {
         // user input firstName
         System.out.print("Enter first name: ");
         String firstName = in.nextLine();
+        this.firstName = firstName;
 
         // user input lastName
         System.out.print("Enter last name: ");
         String lastName = in.nextLine();
-
-        this.firstName = firstName;
         this.lastName = lastName;
-        System.out.println("======================================");
+
+        System.out.println("====================");
 
         // Call a method asking for department - return department
         this.department = setDepartment();
-        System.out.println("Department: " + this.department);
-        System.out.println("======================================");
+        System.out.println("====================");
 
         // Combine elements to generate email
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" +
                 department.toLowerCase() + "." + companySuffix;
         System.out.println("Your email is: " + email);
-        System.out.println("Login Name: " + this.firstName.toLowerCase() + "." + this.lastName.toLowerCase());
+        System.out.println("Login Name: " + this.firstName.toLowerCase().charAt(0) + this.lastName.toLowerCase());
 
         // Call method that returns random password
         this.password = randomPassword(defaultPasswordLength);
@@ -98,5 +97,10 @@ public class Email {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter new password: ");
         this.password = in.nextLine();
+    }
+
+    // Show info
+    public String showInfo(){
+        return "LOGIN NAME: " + firstName.toLowerCase().charAt(0) + lastName.toLowerCase();
     }
 }
