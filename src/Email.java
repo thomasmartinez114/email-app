@@ -29,21 +29,21 @@ public class Email {
         String lastName = in.nextLine();
         this.lastName = lastName;
 
-        System.out.println("====================");
+        System.out.println("======================================");
 
         // Call a method asking for department - return department
         this.department = setDepartment();
-        System.out.println("====================");
+        System.out.println("======================================");
 
         // Combine elements to generate email
         email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" +
                 department.toLowerCase() + "." + companySuffix;
-        System.out.println("Your email is: " + email);
-        System.out.println("Login Name: " + this.firstName.toLowerCase().charAt(0) + this.lastName.toLowerCase());
+//        System.out.println("Your email is: " + email);
+//        System.out.println("Login Name: " + this.firstName.toLowerCase().charAt(0) + this.lastName.toLowerCase());
 
         // Call method that returns random password
         this.password = randomPassword(defaultPasswordLength);
-        System.out.println("Your password is: " + this.password);
+        System.out.println("Your temp password is: " + this.password);
         System.out.println("======================================");
     }
 
@@ -97,10 +97,12 @@ public class Email {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter new password: ");
         this.password = in.nextLine();
+        System.out.println("======================================");
     }
 
     // Show info
     public String showInfo(){
-        return "LOGIN NAME: " + firstName.toLowerCase().charAt(0) + lastName.toLowerCase();
+        return "LOGIN NAME: " + firstName.toLowerCase().charAt(0) + lastName.toLowerCase() + "\nCOMPANY EMAIL: " + email +
+                "\nMAILBOX CAPACITY: " + mailboxCapacity + "mb";
     }
 }

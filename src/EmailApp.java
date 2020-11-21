@@ -5,5 +5,6 @@ public class EmailApp {
         em1.setMailboxCapacity();
         em1.setAlternateEmail();
         em1.changePassword();
+        System.out.println(em1.showInfo());
     }
 }
