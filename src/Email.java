@@ -39,8 +39,6 @@ public class Email {
 
         // Call method that returns random password
         this.password = randomPassword(defaultPasswordLength);
-        System.out.println("Your temp password is: " + this.password);
-        System.out.println("======================================");
     }
 
     // Ask for department
@@ -98,7 +96,9 @@ public class Email {
 
     // Show info
     public String showInfo(){
-        return "LOGIN NAME: " + firstName.toLowerCase().charAt(0) + lastName.toLowerCase() + "\nCOMPANY EMAIL: " + email +
+        return "EMAIL: " + email +
+                "\nUSERNAME: " + firstName.toLowerCase().charAt(0) + lastName.toLowerCase() +
+                "\nTEMPORARY PASSWORD: " + password +
                 "\nMAILBOX CAPACITY: " + mailboxCapacity + "mb";
     }
 }
